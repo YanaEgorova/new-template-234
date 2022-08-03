@@ -179,13 +179,24 @@
         padding: 15rem 2rem;
         width: fit-content;
         margin-left: auto;
+        z-index: 9;
+        position: relative;
     }
     .contacts__list-box {
         padding-right: 5rem;
-        background-image: url('../img/bg2.jpeg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background-color: var(--second-brand-color);
+        position: relative;
+    }
+    .contacts__list-box::before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 30%;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background-color: var(--sub-text-color);
     }
     .contacts__svg {
         margin: 0 1.5rem 0 0;
@@ -274,10 +285,8 @@
         left: 0;
         top: 50%;
         transform: translate(0, -50%);
-        background-image: url('../img/bg1.jpeg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background-color: var(--first-brand-color);
+        border: 3rem solid var(--second-brand-color);
         z-index: -2;
     }
     .policy__block {
